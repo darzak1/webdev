@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Darek Żak</title>
+</head>
+<body>
+
+    <h1 th:text="#{welcome.message}">Czesć</h1>
+    <h3 th:utext="#{welcome.info}">test</h3>
+    <p th:text="|${fName} ${lName}|">Adrzej</p>
+
+    <hr>
+
+    <p th:text="|${person.firstName} ${person.lastName}|">Marek</p>
+    <p th:text="${person.phoneNumber}">135658468</p>
+    <h1 th:text="|Pensja: ${#numbers.formatDecimal(person.salary, 1, 2)}|"></h1>
+
+
+</body>
+</html>
